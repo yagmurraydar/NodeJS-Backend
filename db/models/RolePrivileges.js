@@ -1,0 +1,20 @@
+const mongoosw=require('mongoose');
+
+const schema =mongoose.Schema({
+ role_id:{type:mongoose.Schema.Types.ObjectId,required:true},
+ Permissions:{type:String},
+ created_by:{type:mongoose.Schema.Types.ObjectId,required:true},
+},
+{
+    versionKey:false,
+    timestamps:{
+        createdAt:"created_at",
+        updatedAt:"updated_at"
+    }
+}
+);
+    class RolePrivileges extends mongoose.Model {
+
+    }
+    schema.loadClass(RolePrivileges);
+    Module.exports=mongoose.model("role_privileges",schema);

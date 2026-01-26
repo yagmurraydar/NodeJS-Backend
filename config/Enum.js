@@ -1,0 +1,22 @@
+module.exports={
+    HTTP_CODES:{
+        OK:200,
+        CREATED:201,
+        BAD_REQUEST:400,
+        UNAUTHORIZED:401,
+        NOT_MODIFIED:304,
+        NO_CONTENT:204,
+        INTERNAL_SERVER_ERROR:500,
+        FORBIDDEN:403,
+        NOT_FOUND:404,
+        CONFLICT:409,
+        UNPROCESSABLE_ENTITY:422,
+        TIMED_OUT:408,
+        METHOD_NOT_ALLOWED:405,
+        NOT_ACCEPTABLE:406,
+        GONE:410,
+        UNSPORTED_MEDIA_TYPE:415,
+        TOO_MANY_REQUESTS:429,
+        BAD_GATEWAY:502
+    }
+}
