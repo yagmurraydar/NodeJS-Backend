@@ -5,7 +5,7 @@ const Response = require("../lib/Response");
 const CustomError = require("../lib/Error");
 const Enum = require("../config/Enum");
 
-/* GET categories listing. */
+
 router.get('/', async (req, res, next) => {
     try {
         let categories = await Categories.find({});
@@ -17,7 +17,7 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-/* POST add category. */
+
 router.post('/add', async (req, res) => {
     let body = req.body;
     try {
@@ -62,8 +62,7 @@ router.post("/delete", async (req, res) => {
     try {
         if (!body._id) throw new CustomError(Enum.HTTP_CODES.BAD_REQUEST, "Validation Error", "_id must be filled");
         
-        // HATA: Categories.remove sende çalışmıyor çünkü Mongoose versiyonun güncel.
-        // ÇÖZÜM: deleteOne kullanmalısın.
+   
         await Categories.deleteOne({ _id: body._id });
         
         res.json(Response.successResponse({ success: true }));
