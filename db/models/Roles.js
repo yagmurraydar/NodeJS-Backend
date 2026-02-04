@@ -1,4 +1,4 @@
-const mongoose=rquire('moongose');
+const mongoose=require('mongoose');
 
 const schema=mongoose.Schema({
 role_name:{type:String,required:true},
@@ -19,4 +19,4 @@ class Roles extends mongoose.Model {
 
 }
 schema.loadClass(Roles);
-Module.exports=mongoose.model("roles",schema);
+module.exports=mongoose.model("roles",schema);
