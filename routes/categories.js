@@ -12,7 +12,7 @@ router.get('/', async (req, res, next) => {
         res.json(Response.successResponse(categories));
     } catch (err) {
         let errorResponse = Response.errorResponse(err);
-        // Hata: .code undefined gelirse sunucu çöküyordu, || 500 ekledik
+      
         res.status(errorResponse.code || 500).json(errorResponse);
     }
 });
@@ -28,7 +28,7 @@ router.post('/add', async (req, res) => {
         let category = new Categories({
             name: body.name,
             is_active: true,
-            created_by: req.user?.id || "65a123456789012345678901" // req.user yoksa geçici bir ID
+            created_by: req.user?.id || "65a123456789012345678901" 
         });
 
         await category.save();
