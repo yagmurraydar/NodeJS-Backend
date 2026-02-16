@@ -18,5 +18,8 @@ module.exports={
         UNSPORTED_MEDIA_TYPE:415,
         TOO_MANY_REQUESTS:429,
         BAD_GATEWAY:502
-    }
+    },
+    PASS_LENGTH:8,
+    SUPER_ADMIN:"SUPER_ADMIN"
+
 }

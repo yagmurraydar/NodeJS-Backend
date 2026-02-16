@@ -1,4 +1,4 @@
-const mongoosw=require('mongoose');
+const mongoose=require('mongoose');
 
 const schema =mongoose.Schema({
    role_id:{type:mongoose.Schema.Types.ObjectId,required:true},
@@ -16,4 +16,4 @@ const schema =mongoose.Schema({
 
     }
     schema.loadClass(UsersRoles);
-    Module.exports=mongoose.model("users_roles",schema);
+    module.exports=mongoose.model("users_roles",schema);

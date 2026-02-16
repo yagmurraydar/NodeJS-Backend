@@ -3,7 +3,7 @@ const mongoose=require('mongoose');
 const schema = mongoose.Schema({
  role_id:{type:mongoose.Schema.Types.ObjectId,required:true},
  Permissions:{type:String},
- created_by:{type:mongoose.Schema.Types.ObjectId,required:true},
+ created_by:{type:mongoose.Schema.Types.ObjectId},
 },
 {
     versionKey:false,
